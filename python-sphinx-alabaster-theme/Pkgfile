@@ -1,0 +1,22 @@
+makedepends=(python)
+
+description="Sphinx default theme"
+url='https://github.com/bitprophet/alabaster'
+
+packager="Grat-Os TEAM"
+contributors="enigma158an201"
+
+name=python-sphinx-alabaster-theme
+#version=0.7.12
+#release=2
+version=0.7.13
+release=1
+
+source=(https://pypi.org/packages/source/a/alabaster/alabaster-$version.tar.gz)
+
+build() {
+  cd alabaster-$version
+  python3 setup.py build
+
+  python3 setup.py install --root=$PKG --optimize=1
+}

@@ -1,0 +1,19 @@
+makedepends=(python)
+#run=()
+description="Sphinx extension which renders HTML help files"
+url="https://github.com/sphinx-doc/sphinxcontrib-htmlhelp"
+packager="Grat-OS Team"
+maintainer="enigma158an201"
+
+name=python-sphinxcontrib-htmlhelp
+version=2.0.0
+release=3
+_name=sphinxcontrib-htmlhelp
+
+source=(https://pypi.io/packages/source/s/${_name}/${_name}-${version}.tar.gz)
+
+build() {
+  cd ${_name}-$version
+  python3 setup.py build
+  python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}

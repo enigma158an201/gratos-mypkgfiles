@@ -1,0 +1,22 @@
+makedepends=(python)
+#run=()
+description="Sphinx extension which outputs Apple help books"
+url="https://github.com/sphinx-doc/sphinxcontrib-applehelp"
+packager="Grat-OS Team"
+maintainer="enigma158an201"
+name=python-sphinxcontrib-applehelp
+_name=sphinxcontrib-applehelp
+version=1.0.2
+release=3
+#version=1.0.4
+#release=1
+
+#source=(https://files.pythonhosted.org/packages/9f/01/ad9d4ebbceddbed9979ab4a89ddb78c9760e74e6757b1880f1b2760e8295/sphinxcontrib-applehelp-1.0.2.tar.gz)
+#source=(https://pypi.org/packages/source/s/sphinxcontrib-applehelp/sphinxcontrib-applehelp-$version.tar.gz)
+source=(https://pypi.io/packages/source/s/sphinxcontrib-applehelp/sphinxcontrib-applehelp-$version.tar.gz)
+
+build() {
+  cd ${_name}-$version || cd ${name}-$version
+  python3 setup.py build
+  python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}

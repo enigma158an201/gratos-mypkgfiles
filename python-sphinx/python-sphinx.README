@@ -1,0 +1,11 @@
+# renomme 	 python-jinja en python-jinja2
+# manquants: python-babel python-sphinx-alabaster-theme python-sphinxcontrib-applehelp
+#            python-sphinxcontrib-devhelp python-sphinxcontrib-htmlhelp
+#            python-sphinxcontrib-jsmath python-sphinxcontrib-qthelp
+#            python-sphinxcontrib-serializinghtml
+
+#source=(https://pypi.org/packages/source/S/Sphinx/Sphinx-$version.tar.gz)
+#source=(https://codeload.github.com/sphinx-doc/sphinx/tar.gz/refs/heads/master)
+#source=(https://files.pythonhosted.org/packages/db/0b/a0f60c4abd8a69bd5b0d20edde8a8d8d9d4ca825bbd920d328d248fd0290/Sphinx-6.1.3.tar.gz)
+#source=(https://github.com/sphinx-doc/sphinx/releases/download/$version/$name-$version.tar.gz)
+#source=(https://github.com/sphinx-doc/sphinx/archive/refs/tags/v$version.tar.gz)

@@ -1,0 +1,17 @@
+makedepends=(python)
+#run=()
+description="Sphinx extension which renders display math in HTML via JavaScript"
+url="https://github.com/sphinx-doc/sphinxcontrib-jsmath"
+packager="Grat-OS Team"
+maintainer="enigma158an201"
+name=python-sphinxcontrib-jsmath
+version=1.0.1
+release=3
+_name=sphinxcontrib-jsmath
+source=(https://pypi.io/packages/source/s/${_name}/${_name}-${version}.tar.gz)
+
+build() {
+  cd ${_name}-$version
+  python3 setup.py build
+  python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}

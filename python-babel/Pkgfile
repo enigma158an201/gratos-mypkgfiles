@@ -1,0 +1,27 @@
+makedepends=(python python-pytz)
+
+description='A collection of tools for internationalizing Python applications'
+url='http://babel.pocoo.org/'
+
+packager="Grat-OS Team"
+maintainer="enigma158an201 (pkg compilation)"
+
+name=python-babel
+version=2.11.0
+
+
+source=(https://github.com/python-babel/babel/archive/v$version/$name-$version.tar.gz
+        https://unicode.org/Public/cldr/41/core.zip)
+
+prepare() {
+  cp $PKGMK_SOURCE_DIR/core.zip $SRC/babel-$version/cldr/cldr-core-41.zip
+}
+
+build() {
+  cd babel-$version
+
+  python3 setup.py import_cldr
+  python3 setup.py build
+
+  python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}
